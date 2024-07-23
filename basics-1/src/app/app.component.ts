@@ -1,13 +1,16 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RoomsComponent } from './components/rooms/rooms.component';
+import { BedsComponent } from './components/beds/beds.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
-  // templateUrl: './app.component.html',
-  template: `<p class="text">Hello world</p>`,
-  // styleUrl: './app.component.css',
+  imports: [RoomsComponent, BedsComponent],
+  template: `
+    <p class="text">Hello world</p>
+    <app-rooms></app-rooms>
+    <app-beds></app-beds>
+  `,
   styles: [
     `
       .text {
